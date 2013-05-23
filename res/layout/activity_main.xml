@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+     
+<TextView
+ android:id="@+id/textView1"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:text="Write bbcode to convert it :"
+ android:background="#1F87AA"
+ android:textColor="@android:color/white"
+ android:textSize="20sp"
+ />
+
+<EditText
+	    android:id="@+id/editeText111"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="0.5"
+	    android:background="#E0F7FF"
+	    android:hint="Write bbcode"
+	    android:gravity="top|left"
+	    />
+
+  
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+		 android:layout_height="wrap_content"
+        android:background="#1F87AA"
+        android:text="method 1"
+        android:textColor="@android:color/white"
+       
+        />
+    
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+		 android:layout_height="wrap_content"
+        android:background="#1F87AA"
+        android:text="method2"
+        android:textColor="@android:color/white"
+        />
+</LinearLayout>
+
+     	    
+	<WebView
+	    android:id="@+id/webView1"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_weight="0.5" 
+	    />
+
+	<Button
+	    android:id="@+id/Button_test"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#1F87AA"
+	    android:text="or show examples .. "
+	    android:textColor="@android:color/white"
+	    android:textSize="20sp"
+	    android:gravity="left" 
+	    />
+
+</LinearLayout>
