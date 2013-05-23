@@ -3,6 +3,11 @@ package com.example.bbcodetohtml;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.kefirsf.bb.BBProcessorFactory;
+import org.kefirsf.bb.TextProcessor;
+
+
+//import org.kefirsf.bb.conf.Configuration;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +18,7 @@ import android.graphics.Color;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,17 +32,20 @@ public class MainActivity extends Activity {
 
 	private Handler mHandler = new Handler();
 	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.activity_main);
+
+	
+		
 		Button btn = (Button) findViewById(R.id.button1);
 		btn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
 				EditText text = (EditText) findViewById(R.id.editeText111);
+				
 				WebView webView = (WebView) findViewById(R.id.webView1);
 				webView.getSettings().setJavaScriptEnabled(true);
 				webView.addJavascriptInterface(new MyJavaScriptInterface(), "Android");
@@ -44,10 +53,26 @@ public class MainActivity extends Activity {
 				//webView.loadData(BBcodeToHtmlConverter.bbcode(summary,this), "text/html; charset=UTF-8", null);
 				webView.loadDataWithBaseURL("fake://not/needed",BBcodeToHtmlConverter.bbcode(text.getText().toString(),MainActivity.this), "text/html","utf-8", "");
 		
-		}
-				
+			}
+		});
+		
+		
+		Button btn2 = (Button) findViewById(R.id.button2);
+		btn2.setOnClickListener(new View.OnClickListener() {
 			
-
+			@Override
+			public void onClick(View arg0) {
+				
+				EditText text = (EditText) findViewById(R.id.editeText111);
+				text.setFocusable(true); 
+				WebView webView = (WebView) findViewById(R.id.webView1);
+				webView.getSettings().setJavaScriptEnabled(true);
+				webView.addJavascriptInterface(new MyJavaScriptInterface(), "Android");
+				webView.loadUrl("about:blank");
+				TextProcessor processor = BBProcessorFactory.getInstance().create();
+				webView.loadDataWithBaseURL("fake://not/needed",processor.process(text.getText().toString()), "text/html","utf-8", "");
+		
+			}
 		});
 		
 		Button btn_test = (Button) findViewById(R.id.Button_test);
@@ -60,7 +85,7 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		
+		super.onCreate(savedInstanceState);
 	}
 
 	 final class MyJavaScriptInterface

@@ -33,15 +33,31 @@
      </TableLayout>
  
      </ScrollView>
-     <TextView
- 		 android:id="@+id/textView1"
- 		 android:layout_width="match_parent"
- 		 android:layout_height="wrap_content"
- 		 android:text="Test : "
- 		 android:background="#1F87AA"
- 		 android:textSize="20sp"
- 		 android:textColor="@android:color/white" 
- 		 />
+     <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+		 android:layout_height="wrap_content"
+        android:background="#1F87AA"
+        android:text="method 1"
+        android:textColor="@android:color/white"
+       
+        />
+    
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+		 android:layout_height="wrap_content"
+        android:background="#1F87AA"
+        android:text="method2"
+        android:textColor="@android:color/white"
+        />
+</LinearLayout>
      
  <LinearLayout
      android:layout_width="match_parent"

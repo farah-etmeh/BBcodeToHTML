@@ -23,6 +23,7 @@
 	    android:background="#E0F7FF"
 	    android:hint="Write bbcode"
 	    android:gravity="top|left"
+	    
 	    />
 
   
