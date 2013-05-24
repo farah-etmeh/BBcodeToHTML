@@ -95,6 +95,10 @@
         <coderef name="center"/>
         <coderef name="right"/>
         <coderef name="left"/>
+   
+        <!-- direction -->
+        <coderef name="rtl"/>
+        <coderef name="ltr"/>
         
         <!-- Lists -->
         <coderef name="list1"/>
@@ -180,6 +184,16 @@
         <template>&lt;div align=left&gt;<var name="text"/>&lt;/div&gt;</template>
     </code>
     
+   <!-- direction -->
+   <code name="rtl">
+        <pattern ignoreCase="true">[rtl]<var name="text" inherit="true"/>[/rtl]</pattern>
+        <template>&lt;div dir=rtl&gt;<var name="text"/>&lt;/div&gt;</template>
+    </code>
+    
+    <code name="ltr">
+        <pattern ignoreCase="true">[ltr]<var name="text" inherit="true"/>[/ltr]</pattern>
+        <template>&lt;div dir=ltr&gt;<var name="text"/>&lt;/div&gt;</template>
+    </code>
    
     <!-- Font size -->
     <code name="size">
@@ -306,32 +320,32 @@
     <!-- List  -->
     
     <code name="list1">
-         <pattern ignoreCase="true">[list][*]<var name="text"/>[/list]</pattern>
+         <pattern ignoreCase="true">[list]<var/>[*]<var name="text"/>[/list]</pattern>
         <template>&lt;ul&gt;&lt;li&gt;<var name="text"/>&lt;/li&gt;&lt;/ul&gt;</template>
     </code>
     
     <code name="list2">
-         <pattern ignoreCase="true">[list=i][*]<var name="text"/>[/list]</pattern>
+         <pattern ignoreCase="true">[list=i]<var/>[*]<var name="text"/>[/list]</pattern>
         <template>&lt;ol style=&quot;list-style-type:lower-roman&quot;&gt;&lt;li&gt;<var name="text"/>&lt;/li&gt;&lt;/ol&gt;</template>
     </code> 
     
     <code name="list3">
-        <pattern ignoreCase="true">[list=I][*]<var name="text"/>[/list]</pattern>
+        <pattern ignoreCase="true">[list=I]<var/>[*]<var name="text"/>[/list]</pattern>
         <template>&lt;ol style=&quot;list-style-type:upper-roman&quot;&gt;&lt;li&gt;<var name="text"/>&lt;/li&gt;&lt;/ol&gt;</template>
     </code> 
     
     <code name="list4">
-        <pattern ignoreCase="true">[list=<var regex="[a-h|j-z]"/>][*]<var name="text"/>[/list]</pattern>
+        <pattern ignoreCase="true">[list=<var regex="[a-h|j-z]"/>]<var/>[*]<var name="text"/>[/list]</pattern>
         <template>&lt;ol style=&quot;list-style-type:lower-alpha&quot;&gt;&lt;li&gt;<var name="text"/>&lt;/li&gt;&lt;/ol&gt;</template>
     </code> 
     
     <code name="list5">
-        <pattern ignoreCase="true">[list=<var regex="[A-H|J-Z]"/>][*]<var name="text"/>[/list]</pattern>
+        <pattern ignoreCase="true">[list=<var regex="[A-H|J-Z]"/>]<var/>[*]<var name="text"/>[/list]</pattern>
         <template>&lt;ol style=&quot;list-style-type:upper-alpha&quot;&gt;&lt;li&gt;<var name="text"/>&lt;/li&gt;&lt;/ol&gt;</template>
     </code> 
     
     <code name="list6">
-        <pattern ignoreCase="true">[list=<var regex="[0-9]"/>][*]<var name="text"/>[/list]</pattern>
+        <pattern ignoreCase="true">[list=<var regex="[0-9]"/>]<var/>[*]<var name="text"/>[/list]</pattern>
         <template>&lt;ol style=&quot;list-style-type:decimal&quot;&gt;&lt;li&gt;<var name="text"/>&lt;/li&gt;&lt;/ol&gt;</template>
     </code> 
 

@@ -1,0 +1,76 @@
+[rtl][quote="farah_online"][center][b]
+
+السلام عليكم 
+[:)]
+فهرس الدروس البرمجية المعدَّة من قبل بعض أعضاء الـ ite 
+حسب الترتيب الزمني 
+ [/b][/center]
+
+[b][color=#FF0000]LINQ to XML : [/color][/b]
+[b]إعداد :[/b] [url=http://ite-sy.net/forum/memberlist.php?mode=viewprofile&u=261]Hammod[/url]
+[b]الدروس (pdf) :[/b] 
+[list][*] [url=http://ite-sy.net/forum/download/file.php?id=12540]الدرس الأول[/url]
+[*] [url=http://ite-sy.net/forum/download/file.php?id=12992]الدرس الثاني[/url]
+[*] [url=http://ite-sy.net/forum/download/file.php?id=13394]الدرس الثالث[/url][/list]
+مواضيع المناقشة [url=http://ite-sy.net/forum/viewtopic.php?f=39&t=5518]1[/url], [url=http://ite-sy.net/forum/viewtopic.php?f=39&t=5644]2[/url] , [url=http://ite-sy.net/forum/viewtopic.php?f=39&t=5753]3[/url] 
+
+
+[right][ltr][color=#FF0000][b] :  Network Programming with socket ( with Java & C# ) [/b][/color][/ltr][/right][color=#000000][b]إعداد :[/b][/color] [url=http://ite-sy.net/forum/memberlist.php?mode=viewprofile&u=280]Mohammad_807[/url]
+[url=http://ite-sy.net/forum/download/file.php?id=13154]الملخص (pdf)[/url]
+[url=http://ite-sy.net/forum/viewtopic.php?f=39&t=5704]موضوع المناقشة[/url]
+
+
+[color=#FF0000][b]cpp.net : [/b][/color]
+[b]إعداد : [/b] [url=http://ite-sy.net/forum/memberlist.php?mode=viewprofile&u=967]PrinceOfDarkness[/url]	
+الدروس (pdf) : 
+[list][*][url=http://ite-sy.net/forum/download/file.php?id=15266]الدرس الأول[/url]
+[*][url=http://ite-sy.net/forum/download/file.php?id=15267]الدرس الثاني[/url][/list]
+مواضيع المناقشة : [url=http://ite-sy.net/forum/viewtopic.php?f=39&t=5619]1[/url] , [url=http://ite-sy.net/forum/viewtopic.php?f=39&t=5630]2[/url]
+
+
+[color=#FF0000][b]Delphi : [/b][/color]
+[b]إعداد :[/b] [url=http://ite-sy.net/forum/memberlist.php?mode=viewprofile&u=938]GTR[/url]
+[b]الدروس (slides): [/b]
+[list][*][url=http://ite-sy.net/forum/download/file.php?id=11634]الدرس الأول[/url]
+[*][url=http://ite-sy.net/forum/download/file.php?id=11637]الدرس الثاني[/url]
+[*][url=http://ite-sy.net/forum/download/file.php?id=11638]الدرس الثالث[/url]
+[*][url=http://ite-sy.net/forum/download/file.php?id=11688]الدرس الرابع[/url]
+[*][url=http://ite-sy.net/forum/download/file.php?id=11714]الدرس الخامس[/url]
+[*][url=http://ite-sy.net/forum/download/file.php?id=11784]الدرس السادس[/url]
+[*][url=http://ite-sy.net/forum/download/file.php?id=11806]الدرس السابع[/url]
+[*][url=http://ite-sy.net/forum/download/file.php?id=11840]الدرس الثامن[/url]
+[*][url=http://ite-sy.net/forum/download/file.php?id=11856]الدرس التاسع[/url]
+[*][url=http://ite-sy.net/forum/download/file.php?id=11886]الدرس العاشر[/url] 
+[*][url=http://ite-sy.net/forum/download/file.php?id=11964]الدرس الحادي عشر[/url][/list]
+[url=http://ite-sy.net/forum/viewtopic.php?f=183&t=5135]موضوع المناقشة[/url]
+
+
+[b][color=#FF0000]SQL  : [/color][/b]
+[b]إعداد :[/b] [url=http://ite-sy.net/forum/memberlist.php?mode=viewprofile&u=740]Golden Man[/url]
+[b] الدروس (slides) : [/b]
+[list][*] [url=http://ite-sy.net/forum/download/file.php?id=8161]الدرس الأول[/url]
+[*] [url=http://ite-sy.net/forum/download/file.php?id=8162]الدرس الثاني[/url]
+[*] [url=http://ite-sy.net/forum/download/file.php?id=8163]الدرس الثالث[/url]
+[*]الدرس الرابع  [url=http://ite-sy.net/forum/download/file.php?id=8164]1[/url] , [url=http://ite-sy.net/forum/download/file.php?id=8166]2[/url]  
+[*]الدرس الخامس  [url=http://ite-sy.net/forum/download/file.php?id=8165]1[/url] , [url=http://ite-sy.net/forum/download/file.php?id=8167]2[/url]  
+[*] [url=http://ite-sy.net/forum/download/file.php?id=8168]الدرس السادس[/url]
+[*] [url=http://ite-sy.net/forum/download/file.php?id=8169]الدرس السابع[/url]
+[*] [url=http://ite-sy.net/forum/download/file.php?id=8171]الدرس الثامن[/url][/list]
+[url=http://ite-sy.net/forum/viewtopic.php?f=39&t=3645]موضوع المناقشة[/url] 
+
+
+[b][color=#FF0000]Delphi : [/color][/b]
+[b]إعداد :[/b] [url=http://ite-sy.net/forum/memberlist.php?mode=viewprofile&u=60]DAM[/url]
+[b]الدروس (pdf) :[/b]
+[list][*][url=http://ite-sy.net/forum/download/file.php?id=115]الدرس الأول[/url]
+[*] [url=http://ite-sy.net/forum/download/file.php?id=274]الدرس الثاني[/url]
+[*] [url=http://ite-sy.net/forum/download/file.php?id=524]الدرس الثالث[/url]
+[*] [url=http://ite-sy.net/forum/download/file.php?id=2076]الدرس الرابع[/url]
+ [/list]
+[url=http://ite-sy.net/forum/viewtopic.php?f=39&t=266]موضوع المناقشة[/url]
+
+
+[b][color=#FF0000]Pascal  : [/color][/b]
+[b]إعداد :[/b] فريق عمل الـ ite 
+[url=http://ite-sy.net/forum/viewtopic.php?f=39&t=1217&start=150]موضوع المناقشة[/url][/quote]
+[/rtl]

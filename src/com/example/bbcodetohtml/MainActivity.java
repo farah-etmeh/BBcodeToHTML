@@ -1,8 +1,13 @@
 package com.example.bbcodetohtml; 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.json.JSONException;
 import org.kefirsf.bb.BBProcessorFactory;
 import org.kefirsf.bb.TextProcessor;
 
@@ -37,25 +42,60 @@ public class MainActivity extends Activity {
 		
 		setContentView(R.layout.activity_main);
 
-	
+		try {
+			SmiliesConverter.readFile(this);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 		
-		Button btn = (Button) findViewById(R.id.button1);
-		btn.setOnClickListener(new View.OnClickListener() {
+		try {
+			InputStream is = getResources().openRawResource(R.raw.test);
+			BufferedReader bis = new BufferedReader(new InputStreamReader(is));
+			StringBuffer b = new StringBuffer();
+			String line = "";
 			
-			@Override
-			public void onClick(View arg0) {
-				EditText text = (EditText) findViewById(R.id.editeText111);
-				
-				WebView webView = (WebView) findViewById(R.id.webView1);
-				webView.getSettings().setJavaScriptEnabled(true);
-				webView.addJavascriptInterface(new MyJavaScriptInterface(), "Android");
-				webView.loadUrl("about:blank");
-				//webView.loadData(BBcodeToHtmlConverter.bbcode(summary,this), "text/html; charset=UTF-8", null);
-				webView.loadDataWithBaseURL("fake://not/needed",BBcodeToHtmlConverter.bbcode(text.getText().toString(),MainActivity.this), "text/html","utf-8", "");
-		
+				while((line = bis.readLine()) != null){
+					b.append(line+"\n");
 			}
-		});
-		
+			bis.close();
+			EditText text = (EditText) findViewById(R.id.editeText111);
+			text.setText(b);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//		
+//		Button btn = (Button) findViewById(R.id.button1);
+//		btn.setOnClickListener(new View.OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View arg0) {
+//				EditText text = (EditText) findViewById(R.id.editeText111);
+//				
+//				WebView webView = (WebView) findViewById(R.id.webView1);
+//				webView.getSettings().setJavaScriptEnabled(true);
+//				webView.addJavascriptInterface(new MyJavaScriptInterface(), "Android");
+//				webView.loadUrl("about:blank");
+//				String htmlCode = BBcodeToHtmlConverter.bbcode(text.getText().toString(),MainActivity.this);
+//				htmlCode=SmiliesConverter.ConverteSmiles(htmlCode);
+//				webView.loadDataWithBaseURL("fake://not/needed",htmlCode, "text/html","utf-8", "");
+//		
+//			}
+//		});
+//		
+		EditText text = (EditText) findViewById(R.id.editeText111);
+		WebView webView = (WebView) findViewById(R.id.webView1);
+		webView.getSettings().setJavaScriptEnabled(true);
+		webView.addJavascriptInterface(new MyJavaScriptInterface(), "Android");
+		webView.loadUrl("about:blank");
+		TextProcessor processor = BBProcessorFactory.getInstance().create();
+		String htmlCode = processor.process(text.getText().toString());
+		htmlCode=SmiliesConverter.ConverteSmiles(htmlCode); 
+		webView.loadDataWithBaseURL("fake://not/needed",htmlCode, "text/html","utf-8", "");
 		
 		Button btn2 = (Button) findViewById(R.id.button2);
 		btn2.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +110,9 @@ public class MainActivity extends Activity {
 				webView.addJavascriptInterface(new MyJavaScriptInterface(), "Android");
 				webView.loadUrl("about:blank");
 				TextProcessor processor = BBProcessorFactory.getInstance().create();
-				webView.loadDataWithBaseURL("fake://not/needed",processor.process(text.getText().toString()), "text/html","utf-8", "");
+				String htmlCode = processor.process(text.getText().toString());
+				htmlCode=SmiliesConverter.ConverteSmiles(htmlCode); 
+				webView.loadDataWithBaseURL("fake://not/needed",htmlCode, "text/html","utf-8", "");
 		
 			}
 		});

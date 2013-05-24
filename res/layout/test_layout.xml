@@ -8,11 +8,12 @@
  <TextView
   android:id="@+id/textView1"
   android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:text="Examples : "
+  android:layout_height="30dp"
   android:background="#1F87AA"
+  android:text="Examples : "
   android:textColor="@android:color/white"
   android:textSize="20sp"
+  android:gravity="center_vertical"
   /> 
   <ScrollView
          android:id="@+id/scrollView1"
@@ -37,6 +38,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
      >
+     <!-- 
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
@@ -47,16 +49,17 @@
         android:textColor="@android:color/white"
        
         />
-    
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_weight="0.5"
-		 android:layout_height="wrap_content"
-        android:background="#1F87AA"
-        android:text="method2"
-        android:textColor="@android:color/white"
-        />
+     -->
+    <TextView
+	  android:id="@+id/textView2"
+	  android:layout_width="match_parent"
+	  android:layout_height="30dp"
+	  android:background="#1F87AA"
+	  android:text="Appearance in web view :"
+	  android:textColor="@android:color/white"
+	  android:textSize="20sp"
+	  android:gravity="center_vertical"
+	  />
 </LinearLayout>
      
  <LinearLayout

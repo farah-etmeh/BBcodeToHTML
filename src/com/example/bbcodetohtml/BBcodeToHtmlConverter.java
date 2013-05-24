@@ -27,39 +27,6 @@ import android.content.Context;
 
 public class BBcodeToHtmlConverter {
 
-	Map<String , String> smiles = new  HashMap<String , String>();
-	
-	
-    public static Map<String , String> InitialSmiles (){
-    	Map<String , String> smiles = new  HashMap<String , String>();
-    	smiles.put("[^_^]","anime.png");
-    	smiles.put("[:D]","big_smile.png");
-    	smiles.put("[O.o]","boogle.png");
-    	smiles.put("[:B]","cool.png");
-    	smiles.put("[:'(]","cry.png");
-    	smiles.put("[>:)]","evil.png");
-    	smiles.put("[:/]","irritated.png");
-    	smiles.put("[-_-]","koko.png");
-    	smiles.put("[:o]","oh.png");
-    	smiles.put("[:(]","sad.png");
-    	smiles.put("[O:)]","saint.png");
-    	smiles.put("[:)]","smile.png");
-    	smiles.put("[:P]","tongue.png");
-    	smiles.put("[;)]","wink.png");
-    	
-    	smiles.put(":wink :","big_smile.png");
-    	smiles.put(":sarcastic:","boogle.png");
-    	smiles.put(":cry:","cry.png");
-    	smiles.put(":vma:","evil.png");
-    	smiles.put(":wow:","oh.png");
-    	smiles.put(":sad:","sad.png");
-    	smiles.put(":ism:","smile.png");
-    	smiles.put(":nau:","tongue.png");
-    	smiles.put(":wink:","wink.png");
-    	
-    	
-    	 return smiles ; 
-    }
     
     public static String bbcode(String text, Context context) {
     	
@@ -87,9 +54,13 @@ public class BBcodeToHtmlConverter {
          bbMap.put("\\[font\\=(.+?)\\](.+?)\\[/font\\]", "<span style=\"font-family:$1;\">$2</span>");
          bbMap.put("\\[background\\=(.+?)\\](.+?)\\[/background\\]", "<span style=\"background:$1\">$2</span>");
          bbMap.put("\\[center\\](.+?)\\[/center\\]", "<div align=\"center\">$1</div>");
-         bbMap.put("\\[left\\](.+?)\\[/left\\]", "<p style=\"display:block; text-align:left;\">$1</p>");
+         bbMap.put("\\[left\\](.+?)\\[/left\\]", "<p style=\"display:block; text-align:left\">$1</p>");
+         bbMap.put("\\[right\\](.+?)\\[/right\\]", "<p style=\"display:block; text-align:right\">$1</p>");
+         bbMap.put("\\[center\\](.+?)\\[/center\\]", "<p style=\"display:block; text-align:center;\">$1</p>");
+         bbMap.put("\\[rtl\\](.+?)\\[/rtl\\]", "<div style=\"display:block; dir:rtl\">$1</div>");
+         bbMap.put("\\[ltr\\](.+?)\\[/ltr\\]", "<div style=\"display:block; dir:ltr\">$1</div>");
          bbMap.put("\\[align\\=(.+?)\\](.+?)\\[/align\\]", "<div align=\"$1\">$2</div>");
-         bbMap.put("\\[color\\=(.+?)\\](.+?)\\[/color\\]", "<span style=\"color:$1;\">$2</span>");
+         bbMap.put("\\[color\\=(.+?)\\](.+?)\\[/color\\]", "<span style=\"color:$1\">$2</span>");
          bbMap.put("\\[size\\=([0-9]+?)\\](.+?)\\[/size\\]", "<span style=\"font-size:$1em;\">$2</span>");
          
          bbMap.put("\\[img\\](.+?)\\[/img\\]", "<img src=\"$1\" />");
@@ -107,12 +78,6 @@ public class BBcodeToHtmlConverter {
          for (Map.Entry entry: bbMap.entrySet()) {
              temp = temp.replaceAll((String)entry.getKey(), entry.getValue().toString());
          }
-         
-         Map<String , String> smiles =  InitialSmiles() ; 
-         for (Map.Entry entry: smiles.entrySet()) {
-         	temp = temp.replace((String)entry.getKey(), "<img src=\""+"file:///android_asset/"+entry.getValue().toString()+"\"/>");
-         }
-         
          
          temp = temp.replaceAll("\\[list\\]\\[\\*\\](.+?)\\[/list\\]","<ul><li>$1</li></ul>");
          
@@ -138,4 +103,6 @@ public class BBcodeToHtmlConverter {
         
    		}
    	    
+    
+    
 }
